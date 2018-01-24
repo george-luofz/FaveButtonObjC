@@ -15,7 +15,7 @@ typedef NSArray<UIColor *> DotColors;
 
 - (void)faveButton:(nullable FaveButton *)faveButton didSelected:(BOOL)selected;
 
-- (nullable DotColors*)faveButtonDotColors:(nullable FaveButton *)faveButton;
+- (nullable NSArray<DotColors *> *)faveButtonDotColors:(nullable FaveButton *)faveButton;
 
 @end
 
@@ -23,7 +23,13 @@ typedef NSArray<UIColor *> DotColors;
 
 @property (nonatomic, nullable, weak) id<FaveButtonDelegate>        delegate;
 
+@property (nonatomic, strong) IBInspectable UIColor *normalColor;
+@property (nonatomic, strong) IBInspectable UIColor *selectedColor;
+@property (nonatomic, strong) IBInspectable UIColor *dotFirstColor;
+@property (nonatomic, strong) IBInspectable UIColor *dotSecondColor;
+@property (nonatomic, strong) IBInspectable UIColor *circleFromColor;
+@property (nonatomic, strong) IBInspectable UIColor *circleToColor;
+
 - (nullable instancetype)initWithFrame:(CGRect)frame faveIconNormal:(nullable UIImage *)faveIconNormal;
 
-//- (instancetype)initWithCoder:(NSCoder *)aDecoder;
 @end

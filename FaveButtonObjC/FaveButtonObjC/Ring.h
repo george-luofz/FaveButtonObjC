@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class FaveButton;
 @interface Ring : UIView
 
-+ (nullable instancetype)createRing:(UIView *)onView radius:(CGFloat)radius lineWidth:(CGFloat)lineWidth fillColor:(UIColor *)fillColor;
++ (nullable instancetype)createRing:(nullable FaveButton *)faveButton radius:(CGFloat)radius lineWidth:(CGFloat)lineWidth fillColor:(nullable UIColor *)fillColor;
 
-- (void)animateToRadius:(CGFloat)radius toColor:(UIColor *)toColor duration:(CGFloat)duration;
+- (void)animateToRadius:(CGFloat)radius toColor:(nullable UIColor *)toColor duration:(CGFloat)duration delay:(CGFloat)delay;
 
 - (void)animateColapse:(CGFloat)radius duration:(CGFloat)duraton delay:(CGFloat)delay;
 @end

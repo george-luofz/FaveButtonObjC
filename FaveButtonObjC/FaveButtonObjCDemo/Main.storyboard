@@ -10,30 +10,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Delegate-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaveButtonDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="HLt-IA-3RJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mxh-WP-sju"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnp-Bx-c8g" customClass="FaveButton" customModule="FaveButtonDemo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnp-Bx-c8g" customClass="FaveButton">
                                 <rect key="frame" x="175.5" y="583" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="PSw-kF-tW9"/>
                                     <constraint firstAttribute="height" constant="24" id="U9y-pw-0B0"/>
                                 </constraints>
                                 <state key="normal" title="love" image="heart"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="XnC-Fe-Rt2"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0d-Bk-ChU" userLabel="star" customClass="FaveButton" customModule="FaveButtonDemo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0d-Bk-ChU" userLabel="star" customClass="FaveButton">
                                 <rect key="frame" x="25" y="311.5" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="322-34-sEt"/>
@@ -57,22 +54,16 @@
                                         <color key="value" red="1" green="0.67450980392156867" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="R6u-Jr-1Jw"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUv-ku-yeg" userLabel="heart" customClass="FaveButton" customModule="FaveButtonDemo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUv-ku-yeg" userLabel="heart" customClass="FaveButton">
                                 <rect key="frame" x="118.5" y="311.5" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ICX-nz-LkC"/>
                                     <constraint firstAttribute="width" constant="44" id="Xvm-2b-Lnp"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="heart"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VEs-rY-5i8"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksy-xc-Hkw" userLabel="smile" customClass="FaveButton" customModule="FaveButtonDemo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksy-xc-Hkw" userLabel="smile" customClass="FaveButton">
                                 <rect key="frame" x="212.5" y="311.5" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="dmb-uR-WOY"/>
@@ -90,11 +81,8 @@
                                         <color key="value" red="0.23137254901960785" green="0.71764705882352942" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Hqd-Dc-sgd"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULx-Fl-vuX" userLabel="like" customClass="FaveButton" customModule="FaveButtonDemo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULx-Fl-vuX" userLabel="like" customClass="FaveButton">
                                 <rect key="frame" x="306" y="311.5" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="dVO-7j-9HI"/>
@@ -118,14 +106,10 @@
                                         <color key="value" red="0.28235294117647058" green="0.80784313725490198" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ZbO-ER-0SF"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xnp-Bx-c8g" secondAttribute="bottom" constant="60" id="3kD-VX-Nuj"/>
                             <constraint firstItem="E0d-Bk-ChU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1:4" id="79R-Js-ei0"/>
                             <constraint firstItem="ULx-Fl-vuX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="7:4" id="994-ho-Xs9"/>
                             <constraint firstItem="xnp-Bx-c8g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ag8-c9-oqN"/>
@@ -134,16 +118,14 @@
                             <constraint firstItem="Ksy-xc-Hkw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fli-mi-u7O"/>
                             <constraint firstItem="Ksy-xc-Hkw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="5:4" id="LLv-KX-mui"/>
                             <constraint firstItem="GUv-ku-yeg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="3:4" id="X3a-CJ-HQk"/>
+                            <constraint firstItem="Mxh-WP-sju" firstAttribute="top" secondItem="xnp-Bx-c8g" secondAttribute="bottom" constant="60" id="o2U-Tj-Fzl"/>
                             <constraint firstItem="ULx-Fl-vuX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oYS-IY-bT0"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="heartButton" destination="GUv-ku-yeg" id="Ecv-5p-tFr"/>
-                        <outlet property="loveButton" destination="xnp-Bx-c8g" id="SPB-QH-Uha"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-481" y="-160"/>
         </scene>
     </scenes>
     <resources>

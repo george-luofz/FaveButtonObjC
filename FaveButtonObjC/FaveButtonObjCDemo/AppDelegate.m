@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "FaveButton.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,6 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    self.window = window;
+//    window.rootViewController = [ViewController new];
+//    [window makeKeyAndVisible];
     return YES;
 }
 

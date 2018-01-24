@@ -8,7 +8,9 @@
 
 #import "ViewController.h"
 #import "Easing.h"
-@interface ViewController ()
+#import "FaveButton.h"
+
+@interface ViewController () <FaveButtonDelegate>
 
 @end
 
@@ -17,11 +19,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    [Easing EaseInOut:0 b:0 c:0 d:0];
+//    FaveButton *faveButton1 = [[FaveButton alloc] initWithFrame:CGRectMake(10, 100, 44, 44)];
+//    faveButton1.delegate = self;
+//
+//    [self.view addSubview:faveButton1];
+    
+    
 }
 
+#pragma mark -- faveButton delegate
+- (NSArray<DotColors *> *)faveButtonDotColors:(FaveButton *)faveButton{
+    return nil;
+}
 
-
-
+- (void)faveButton:(FaveButton *)faveButton didSelected:(BOOL)selected{
+    
+}
 @end
