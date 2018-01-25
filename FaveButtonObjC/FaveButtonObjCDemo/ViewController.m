@@ -11,6 +11,7 @@
 #import "FaveButton.h"
 
 @interface ViewController () <FaveButtonDelegate>
+@property (weak, nonatomic) IBOutlet FaveButton *heartButton;
 
 @end
 
@@ -21,17 +22,18 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
     
-//    FaveButton *faveButton1 = [[FaveButton alloc] initWithFrame:CGRectMake(10, 100, 44, 44)];
-//    faveButton1.delegate = self;
-//
-//    [self.view addSubview:faveButton1];
-    
-    
+    self.heartButton.delegate = self;
 }
 
 #pragma mark -- faveButton delegate
 - (NSArray<DotColors *> *)faveButtonDotColors:(FaveButton *)faveButton{
-    return nil;
+    NSArray *colorArr1 = @[RGBA(125, 194, 244, 1),RGBA(226, 38, 47, 1)];
+    NSArray *colorArr2 = @[RGBA(248, 204, 100, 1),RGBA(155, 223, 186, 1)];
+    NSArray *colorArr3 = @[RGBA(125, 100, 244, 1),RGBA(56, 38, 23, 1)];
+    NSArray *colorArr4 = @[RGBA(248, 200, 100, 1),RGBA(2, 14, 186, 1)];
+    NSArray *colorArr5 = @[RGBA(15, 10, 34, 1),RGBA(56, 45, 90, 1)];
+    NSArray *colorArr6 = @[RGBA(23, 34, 100, 1),RGBA(2, 45, 49, 1)];
+    return @[colorArr1,colorArr2,colorArr3,colorArr4,colorArr5,colorArr6];
 }
 
 - (void)faveButton:(FaveButton *)faveButton didSelected:(BOOL)selected{

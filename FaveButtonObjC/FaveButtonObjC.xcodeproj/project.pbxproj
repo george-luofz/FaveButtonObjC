@@ -7,35 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C7B4EDC2016E42D00AB5F04 /* FaveButtonObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C7B4EDA2016E42D00AB5F04 /* FaveButtonObjC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C7B4EEA2016E4D200AB5F04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B4EE92016E4D200AB5F04 /* AppDelegate.m */; };
 		3C7B4EED2016E4D200AB5F04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B4EEC2016E4D200AB5F04 /* ViewController.m */; };
 		3C7B4EF22016E4D200AB5F04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C7B4EF12016E4D200AB5F04 /* Assets.xcassets */; };
 		3C7B4EF52016E4D200AB5F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7B4EF32016E4D200AB5F04 /* LaunchScreen.storyboard */; };
 		3C7B4EF82016E4D200AB5F04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B4EF72016E4D200AB5F04 /* main.m */; };
-		3C7B4EFE20170C7700AB5F04 /* FaveButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C7B4EFC20170C7700AB5F04 /* FaveButton.h */; };
-		3C7B4EFF20170C7700AB5F04 /* FaveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B4EFD20170C7700AB5F04 /* FaveButton.m */; };
-		3C7B4F022017128C00AB5F04 /* FaveIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C7B4F002017128C00AB5F04 /* FaveIcon.h */; };
-		3C7B4F032017128C00AB5F04 /* FaveIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B4F012017128C00AB5F04 /* FaveIcon.m */; };
-		3C7B4F092017155800AB5F04 /* Easing.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C7B4F072017155800AB5F04 /* Easing.h */; };
-		3C7B4F0A2017155800AB5F04 /* Easing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B4F082017155800AB5F04 /* Easing.m */; };
-		3C7B4F1520173E6100AB5F04 /* Ring.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C7B4F1320173E6100AB5F04 /* Ring.h */; };
-		3C7B4F1620173E6100AB5F04 /* Ring.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B4F1420173E6100AB5F04 /* Ring.m */; };
-		3C7B4F1920173E7200AB5F04 /* Spark.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C7B4F1720173E7200AB5F04 /* Spark.h */; };
-		3C7B4F1A20173E7200AB5F04 /* Spark.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B4F1820173E7200AB5F04 /* Spark.m */; };
 		3C7B4F1E2018842300AB5F04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7B4F1D2018842300AB5F04 /* Main.storyboard */; };
-		3CAC844720188C5000210510 /* Spark.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC843A20188C4F00210510 /* Spark.m */; };
-		3CAC844820188C5000210510 /* FaveIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC843B20188C4F00210510 /* FaveIcon.m */; };
-		3CAC844920188C5000210510 /* Ring.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC844120188C4F00210510 /* Ring.m */; };
-		3CAC844A20188C5000210510 /* FaveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC844220188C4F00210510 /* FaveButton.m */; };
-		3CAC844B20188C5000210510 /* Easing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC844520188C4F00210510 /* Easing.m */; };
-		3CAC844C20188C5000210510 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CAC844620188C4F00210510 /* Info.plist */; };
+		3CAC844F2019C54000210510 /* Spark.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC844D2019C54000210510 /* Spark.m */; };
+		3CAC84522019C55C00210510 /* Ring.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC84502019C55C00210510 /* Ring.m */; };
+		3CAC84552019C56B00210510 /* FaveIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC84542019C56B00210510 /* FaveIcon.m */; };
+		3CAC84582019C57600210510 /* FaveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC84562019C57600210510 /* FaveButton.m */; };
+		3CAC845B2019C5A300210510 /* Easing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC84592019C5A200210510 /* Easing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C7B4ED72016E42D00AB5F04 /* FaveButtonObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FaveButtonObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C7B4EDA2016E42D00AB5F04 /* FaveButtonObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaveButtonObjC.h; sourceTree = "<group>"; };
-		3C7B4EDB2016E42D00AB5F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C7B4EE62016E4D200AB5F04 /* FaveButtonObjCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaveButtonObjCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7B4EE82016E4D200AB5F04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C7B4EE92016E4D200AB5F04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -45,29 +31,17 @@
 		3C7B4EF42016E4D200AB5F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C7B4EF62016E4D200AB5F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C7B4EF72016E4D200AB5F04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3C7B4EFC20170C7700AB5F04 /* FaveButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaveButton.h; sourceTree = "<group>"; };
-		3C7B4EFD20170C7700AB5F04 /* FaveButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaveButton.m; sourceTree = "<group>"; };
-		3C7B4F002017128C00AB5F04 /* FaveIcon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaveIcon.h; sourceTree = "<group>"; };
-		3C7B4F012017128C00AB5F04 /* FaveIcon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaveIcon.m; sourceTree = "<group>"; };
-		3C7B4F072017155800AB5F04 /* Easing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Easing.h; sourceTree = "<group>"; };
-		3C7B4F082017155800AB5F04 /* Easing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Easing.m; sourceTree = "<group>"; };
-		3C7B4F1320173E6100AB5F04 /* Ring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ring.h; sourceTree = "<group>"; };
-		3C7B4F1420173E6100AB5F04 /* Ring.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ring.m; sourceTree = "<group>"; };
-		3C7B4F1720173E7200AB5F04 /* Spark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spark.h; sourceTree = "<group>"; };
-		3C7B4F1820173E7200AB5F04 /* Spark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Spark.m; sourceTree = "<group>"; };
 		3C7B4F1D2018842300AB5F04 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		3CAC843A20188C4F00210510 /* Spark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spark.m; sourceTree = "<group>"; };
-		3CAC843B20188C4F00210510 /* FaveIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaveIcon.m; sourceTree = "<group>"; };
 		3CAC843C20188C4F00210510 /* Ring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ring.h; sourceTree = "<group>"; };
-		3CAC843D20188C4F00210510 /* FaveButtonObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaveButtonObjC.h; sourceTree = "<group>"; };
-		3CAC843E20188C4F00210510 /* FaveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaveButton.h; sourceTree = "<group>"; };
 		3CAC843F20188C4F00210510 /* Spark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spark.h; sourceTree = "<group>"; };
-		3CAC844020188C4F00210510 /* FaveIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaveIcon.h; sourceTree = "<group>"; };
-		3CAC844120188C4F00210510 /* Ring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ring.m; sourceTree = "<group>"; };
-		3CAC844220188C4F00210510 /* FaveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaveButton.m; sourceTree = "<group>"; };
-		3CAC844420188C4F00210510 /* Easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Easing.h; sourceTree = "<group>"; };
-		3CAC844520188C4F00210510 /* Easing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Easing.m; sourceTree = "<group>"; };
-		3CAC844620188C4F00210510 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CAC844D2019C54000210510 /* Spark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spark.m; sourceTree = "<group>"; };
+		3CAC84502019C55C00210510 /* Ring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ring.m; sourceTree = "<group>"; };
+		3CAC84532019C56B00210510 /* FaveIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaveIcon.h; sourceTree = "<group>"; };
+		3CAC84542019C56B00210510 /* FaveIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaveIcon.m; sourceTree = "<group>"; };
+		3CAC84562019C57600210510 /* FaveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaveButton.m; sourceTree = "<group>"; };
+		3CAC84572019C57600210510 /* FaveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaveButton.h; sourceTree = "<group>"; };
+		3CAC84592019C5A200210510 /* Easing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Easing.m; sourceTree = "<group>"; };
+		3CAC845A2019C5A200210510 /* Easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Easing.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +65,6 @@
 		3C7B4ECD2016E42D00AB5F04 = {
 			isa = PBXGroup;
 			children = (
-				3C7B4ED92016E42D00AB5F04 /* FaveButtonObjC */,
 				3C7B4EE72016E4D200AB5F04 /* FaveButtonObjCDemo */,
 				3C7B4ED82016E42D00AB5F04 /* Products */,
 				3C7B4F0B20171AEC00AB5F04 /* Frameworks */,
@@ -105,24 +78,6 @@
 				3C7B4EE62016E4D200AB5F04 /* FaveButtonObjCDemo.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		3C7B4ED92016E42D00AB5F04 /* FaveButtonObjC */ = {
-			isa = PBXGroup;
-			children = (
-				3C7B4F04201714FE00AB5F04 /* Helpers */,
-				3C7B4EDA2016E42D00AB5F04 /* FaveButtonObjC.h */,
-				3C7B4EDB2016E42D00AB5F04 /* Info.plist */,
-				3C7B4EFC20170C7700AB5F04 /* FaveButton.h */,
-				3C7B4EFD20170C7700AB5F04 /* FaveButton.m */,
-				3C7B4F002017128C00AB5F04 /* FaveIcon.h */,
-				3C7B4F012017128C00AB5F04 /* FaveIcon.m */,
-				3C7B4F1320173E6100AB5F04 /* Ring.h */,
-				3C7B4F1420173E6100AB5F04 /* Ring.m */,
-				3C7B4F1720173E7200AB5F04 /* Spark.h */,
-				3C7B4F1820173E7200AB5F04 /* Spark.m */,
-			);
-			path = FaveButtonObjC;
 			sourceTree = "<group>";
 		};
 		3C7B4EE72016E4D200AB5F04 /* FaveButtonObjCDemo */ = {
@@ -142,15 +97,6 @@
 			path = FaveButtonObjCDemo;
 			sourceTree = "<group>";
 		};
-		3C7B4F04201714FE00AB5F04 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				3C7B4F072017155800AB5F04 /* Easing.h */,
-				3C7B4F082017155800AB5F04 /* Easing.m */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		3C7B4F0B20171AEC00AB5F04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,17 +107,15 @@
 		3CAC843920188C4F00210510 /* FaveButtonObjC */ = {
 			isa = PBXGroup;
 			children = (
-				3CAC843A20188C4F00210510 /* Spark.m */,
-				3CAC843B20188C4F00210510 /* FaveIcon.m */,
-				3CAC843C20188C4F00210510 /* Ring.h */,
-				3CAC843D20188C4F00210510 /* FaveButtonObjC.h */,
-				3CAC843E20188C4F00210510 /* FaveButton.h */,
 				3CAC843F20188C4F00210510 /* Spark.h */,
-				3CAC844020188C4F00210510 /* FaveIcon.h */,
-				3CAC844120188C4F00210510 /* Ring.m */,
-				3CAC844220188C4F00210510 /* FaveButton.m */,
+				3CAC844D2019C54000210510 /* Spark.m */,
+				3CAC843C20188C4F00210510 /* Ring.h */,
+				3CAC84502019C55C00210510 /* Ring.m */,
+				3CAC84532019C56B00210510 /* FaveIcon.h */,
+				3CAC84542019C56B00210510 /* FaveIcon.m */,
+				3CAC84572019C57600210510 /* FaveButton.h */,
+				3CAC84562019C57600210510 /* FaveButton.m */,
 				3CAC844320188C4F00210510 /* Helpers */,
-				3CAC844620188C4F00210510 /* Info.plist */,
 			);
 			path = FaveButtonObjC;
 			sourceTree = SOURCE_ROOT;
@@ -179,8 +123,8 @@
 		3CAC844320188C4F00210510 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3CAC844420188C4F00210510 /* Easing.h */,
-				3CAC844520188C4F00210510 /* Easing.m */,
+				3CAC845A2019C5A200210510 /* Easing.h */,
+				3CAC84592019C5A200210510 /* Easing.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -192,12 +136,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C7B4F1920173E7200AB5F04 /* Spark.h in Headers */,
-				3C7B4F1520173E6100AB5F04 /* Ring.h in Headers */,
-				3C7B4EFE20170C7700AB5F04 /* FaveButton.h in Headers */,
-				3C7B4F092017155800AB5F04 /* Easing.h in Headers */,
-				3C7B4F022017128C00AB5F04 /* FaveIcon.h in Headers */,
-				3C7B4EDC2016E42D00AB5F04 /* FaveButtonObjC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +227,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CAC844C20188C5000210510 /* Info.plist in Resources */,
 				3C7B4EF52016E4D200AB5F04 /* LaunchScreen.storyboard in Resources */,
 				3C7B4EF22016E4D200AB5F04 /* Assets.xcassets in Resources */,
 				3C7B4F1E2018842300AB5F04 /* Main.storyboard in Resources */,
@@ -303,11 +240,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C7B4F0A2017155800AB5F04 /* Easing.m in Sources */,
-				3C7B4F1A20173E7200AB5F04 /* Spark.m in Sources */,
-				3C7B4F1620173E6100AB5F04 /* Ring.m in Sources */,
-				3C7B4F032017128C00AB5F04 /* FaveIcon.m in Sources */,
-				3C7B4EFF20170C7700AB5F04 /* FaveButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,14 +247,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CAC845B2019C5A300210510 /* Easing.m in Sources */,
 				3C7B4EED2016E4D200AB5F04 /* ViewController.m in Sources */,
-				3CAC844820188C5000210510 /* FaveIcon.m in Sources */,
-				3CAC844B20188C5000210510 /* Easing.m in Sources */,
+				3CAC844F2019C54000210510 /* Spark.m in Sources */,
 				3C7B4EF82016E4D200AB5F04 /* main.m in Sources */,
-				3CAC844A20188C5000210510 /* FaveButton.m in Sources */,
+				3CAC84582019C57600210510 /* FaveButton.m in Sources */,
+				3CAC84552019C56B00210510 /* FaveIcon.m in Sources */,
 				3C7B4EEA2016E4D200AB5F04 /* AppDelegate.m in Sources */,
-				3CAC844720188C5000210510 /* Spark.m in Sources */,
-				3CAC844920188C5000210510 /* Ring.m in Sources */,
+				3CAC84522019C55C00210510 /* Ring.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

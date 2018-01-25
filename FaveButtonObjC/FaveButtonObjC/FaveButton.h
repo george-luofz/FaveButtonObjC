@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#define RGBA(a,b,c,p) [UIColor colorWithRed:a/255.0 green:b/255.0 blue:c/255.0 alpha:p]
 typedef NSArray<UIColor *> DotColors;
 
 @class FaveButton;
@@ -30,6 +30,6 @@ typedef NSArray<UIColor *> DotColors;
 @property (nonatomic, strong) IBInspectable UIColor *circleFromColor;
 @property (nonatomic, strong) IBInspectable UIColor *circleToColor;
 
-- (nullable instancetype)initWithFrame:(CGRect)frame faveIconNormal:(nullable UIImage *)faveIconNormal;
+//- (nullable instancetype)initWithFrame:(CGRect)frame faveIconNormal:(nullable UIImage *)faveIconNormal;
 
 @end

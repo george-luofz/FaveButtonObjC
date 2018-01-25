@@ -39,27 +39,22 @@
 }
 
 + (instancetype)createFaveIcon:(UIView *)onView icon:(UIImage *)icon color:(UIColor *)color{
-    FaveIcon *faveIcon = [[self alloc] initWithRegion:onView.bounds icon:icon color:color];
+    // onView.bounds is not always correct
+    FaveIcon *faveIcon = [[self alloc] initWithRegion:CGRectMake(0, 0, 44, 44) icon:icon color:color];
     faveIcon.translatesAutoresizingMaskIntoConstraints = NO;
     faveIcon.backgroundColor = [UIColor clearColor];
-    
     [onView addSubview:faveIcon];
     
-    NSDictionary *dict = NSDictionaryOfVariableBindings(faveIcon,onView);
-    // constraint
-    NSArray *constraints1=[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[faveIcon]|"
-                                                                  options:0
-                                                                  metrics:nil
-                                                                    views:dict];
+    NSLayoutConstraint *centerXConstraint = [NSLayoutConstraint constraintWithItem:faveIcon attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:onView attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
+    NSLayoutConstraint *centerYConstraint = [NSLayoutConstraint constraintWithItem:faveIcon attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:onView attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
+    NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:faveIcon attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:0];
+    NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:faveIcon attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:0];
     
-    NSArray *constraints2=[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[faveIcon]|"
-                                                                  options:0
-                                                                  metrics:nil
-                                                                    views:dict];
-    [onView addConstraints:constraints1];
-    [onView addConstraints:constraints2];
+    [onView addConstraints:@[centerXConstraint, centerYConstraint]];
+    [faveIcon addConstraints:@[widthConstraint, heightConstraint]];
     return faveIcon;
 }
+
 #pragma mark - configure
 - (void)applyInit{
     CGSize scaleBySize = CGSizeMake(contentRegion.size.width * 0.7, contentRegion.size.height * 0.7);
@@ -75,7 +70,7 @@
     
     iconLayer = [[CAShapeLayer alloc] init];
     iconLayer.fillColor = iconColor.CGColor;
-    iconLayer.path = (__bridge CGPathRef _Nullable)([UIBezierPath bezierPathWithRect:CGRectMake(shapeOrigin.x, shapeOrigin.y, contentRegion.size.width, contentRegion.size.height)]);
+    iconLayer.path = [UIBezierPath bezierPathWithRect:CGRectMake(shapeOrigin.x, shapeOrigin.y, contentRegion.size.width, contentRegion.size.height)].CGPath;
     iconLayer.mask = iconMask;
     
     [self.layer addSublayer:iconLayer];

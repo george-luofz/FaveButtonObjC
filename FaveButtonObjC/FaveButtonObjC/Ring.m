@@ -13,10 +13,10 @@ static NSString * const   sizeKey            = @"sizeKey";
 static NSString * const   collapseAnimation  = @"collapseAnimation";
 @interface Ring()<CAAnimationDelegate>{
     
-    UIColor         *fillColor;
-    CGFloat         radius;
-    CGFloat         lineWidth;
-    CAShapeLayer    *ringLayer;
+    UIColor         *_fillColor;
+    CGFloat         _radius;
+    CGFloat         _lineWidth;
+    CAShapeLayer    *_ringLayer;
     
 }
 @end
@@ -24,9 +24,9 @@ static NSString * const   collapseAnimation  = @"collapseAnimation";
 
 - (instancetype)initWithRadius:(CGFloat)radius lineWidth:(CGFloat)lineWidth fillColor:(UIColor *)fillColor{
     if(self = [super init]){
-        fillColor = fillColor;
-        lineWidth = lineWidth;
-        radius    = radius;
+        _fillColor = fillColor;
+        _lineWidth = lineWidth;
+        _radius    = radius;
         
         [self applyInit];
     }
@@ -48,7 +48,7 @@ static NSString * const   collapseAnimation  = @"collapseAnimation";
     heightConstraint.identifier = sizeKey;
     
     [ring addConstraints:@[widthConstraint,heightConstraint]];
-    [faveButton addConstraints:@[centerXConstraint,centerYConstraint]];
+    [faveButton.superview addConstraints:@[centerXConstraint,centerYConstraint]];
     return ring;
 }
 #pragma mark - configure
@@ -58,26 +58,22 @@ static NSString * const   collapseAnimation  = @"collapseAnimation";
     centerView.backgroundColor = [UIColor clearColor];
     [self addSubview:centerView];
     
-    NSDictionary *dict = NSDictionaryOfVariableBindings(centerView);
-    // constraint
-    NSArray *constraints1=[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[centerView]|"
-                                                                  options:0
-                                                                  metrics:nil
-                                                                    views:dict];
+    NSLayoutConstraint *centerXConstraint = [NSLayoutConstraint constraintWithItem:centerView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
+    NSLayoutConstraint *centerYConstraint = [NSLayoutConstraint constraintWithItem:centerView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
+    NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:centerView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:0];
+    NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:centerView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:0];
     
-    NSArray *constraints2=[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[centerView]|"
-                                                                  options:0
-                                                                  metrics:nil
-                                                                    views:dict];
-    [self addConstraints:constraints1];
-    [self addConstraints:constraints2];
+    [self addConstraints:@[centerXConstraint, centerYConstraint]];
+    [centerView addConstraints:@[widthConstraint, heightConstraint]];
     
-    CAShapeLayer *circle = [self createRingLayer:radius lineWidth:lineWidth fillColor:[UIColor clearColor] strokeColor:fillColor];
-    ringLayer = circle;
+    CAShapeLayer *circle = [self createRingLayer:_radius lineWidth:_lineWidth fillColor:[UIColor clearColor] strokeColor:_fillColor];
+    [centerView.layer addSublayer:circle];
+    
+    _ringLayer = circle;
 }
 
 - (CAShapeLayer *)createRingLayer:(CGFloat)radius lineWidth:(CGFloat)lineWidth fillColor:(UIColor *)fillColor strokeColor:(UIColor *)strokeColor{
-    UIBezierPath *circle = [UIBezierPath bezierPathWithArcCenter:CGPointZero radius:radius - lineWidth / 2 startAngle:0 endAngle:2*M_PI clockwise:YES];
+    UIBezierPath *circle = [UIBezierPath bezierPathWithArcCenter:CGPointZero radius:radius - lineWidth / 2 startAngle:0 endAngle:2 * M_PI clockwise:YES];
     
     CAShapeLayer *ring = [CAShapeLayer layer];
     ring.path       = circle.CGPath;
@@ -92,16 +88,15 @@ static NSString * const   collapseAnimation  = @"collapseAnimation";
 - (void)animateToRadius:(CGFloat)radius toColor:(UIColor *)toColor duration:(CGFloat)duration delay:(CGFloat)delay{
     [self layoutIfNeeded];
     
-    NSArray *selfConstraints = self.constraints;
-    for(NSLayoutConstraint *constraint in selfConstraints){
-        if(![constraint.identifier isEqualToString:sizeKey]) continue;
-        constraint.constant = 2 * radius;
+    for(NSLayoutConstraint *constraint in self.constraints){
+        if([constraint.identifier isEqualToString:sizeKey])
+            constraint.constant = 2 * radius;
     }
     
-    CGFloat fitterdRadius = radius - lineWidth / 2;
+    CGFloat fitterdRadius = radius - _lineWidth / 2;
     
-    CABasicAnimation *fillColorAnim = [self animationFillColor:fillColor toColor:toColor duration:duration delay:delay];
-    CABasicAnimation *lineWidthAnim = [self animationLineWidth:lineWidth duration:duration delay:delay];
+    CABasicAnimation *fillColorAnim = [self animationFillColor:_fillColor toColor:toColor duration:duration delay:delay];
+    CABasicAnimation *lineWidthAnim = [self animationLineWidth:_lineWidth duration:duration delay:delay];
     CABasicAnimation *lineColorAnim = [self animationStrokeColor:toColor duration:duration delay:delay];
     CABasicAnimation *circlePathAnim= [self animationCirclePath:fitterdRadius duration:duration delay:delay];
     
@@ -109,10 +104,10 @@ static NSString * const   collapseAnimation  = @"collapseAnimation";
         [self layoutIfNeeded];
     } completion:^(BOOL finished) {}];
     
-    [ringLayer addAnimation:fillColorAnim forKey:nil];
-    [ringLayer addAnimation:lineColorAnim forKey:nil];
-    [ringLayer addAnimation:lineWidthAnim forKey:nil];
-    [ringLayer addAnimation:circlePathAnim forKey:nil];
+    [_ringLayer addAnimation:fillColorAnim forKey:nil];
+    [_ringLayer addAnimation:lineColorAnim forKey:nil];
+    [_ringLayer addAnimation:lineWidthAnim forKey:nil];
+    [_ringLayer addAnimation:circlePathAnim forKey:nil];
 }
 
 - (CABasicAnimation *)animationFillColor:(UIColor *)fromColor toColor:(UIColor *)toColor duration:(CGFloat)duration delay:(CGFloat)delay{
@@ -150,7 +145,7 @@ static NSString * const   collapseAnimation  = @"collapseAnimation";
 - (CABasicAnimation *)animationCirclePath:(CGFloat )radius duration:(CGFloat)duration delay:(CGFloat)delay{
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointZero radius:radius startAngle:0 endAngle:2 * M_PI clockwise:YES];
     
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeColor"];
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"path"];
     animation.toValue   = (__bridge id _Nullable)(path.CGPath);
     animation.duration  = duration;
     animation.beginTime = CACurrentMediaTime() + delay;
@@ -167,8 +162,8 @@ static NSString * const   collapseAnimation  = @"collapseAnimation";
     circlePathAni.delegate = self;
     [circlePathAni setValue:collapseAnimation forKey:collapseAnimation];
     
-    [ringLayer addAnimation:lineWidthAni forKey:nil];
-    [ringLayer addAnimation:circlePathAni forKey:nil];
+    [_ringLayer addAnimation:lineWidthAni forKey:nil];
+    [_ringLayer addAnimation:circlePathAni forKey:collapseAnimation];
 }
 #pragma mark - animation delegate
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{

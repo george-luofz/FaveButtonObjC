@@ -122,6 +122,9 @@
                             <constraint firstItem="ULx-Fl-vuX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oYS-IY-bT0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heartButton" destination="GUv-ku-yeg" id="Rkh-kV-y1z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

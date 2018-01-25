@@ -11,7 +11,7 @@
 #import "Ring.h"
 #import "Spark.h"
 
-#define RGBA(a,b,c,p) [UIColor colorWithRed:a/255.0 green:b/255.0 blue:c/255.0 alpha:p]
+
 
 @interface FaveButton(){
     CGFloat duration;
@@ -21,13 +21,6 @@
     NSArray *dotRadiusFactors;
     NSInteger sparkGroupCount;
     
-//    UIColor     *normalColor;
-//    UIColor     *selectedColor;
-//    UIColor     *dotFirstColor;
-//    UIColor     *dotSecondColor;
-//    UIColor     *circleFromColor;
-//    UIColor     *circleToColor;
-    
     UIImage     *faveIconImage;
     FaveIcon    *faveIcon;
 }
@@ -35,44 +28,15 @@
 
 @implementation FaveButton
 
-//- (instancetype)init{
-//    if (self = [super init]){
-//        duration            = 1.0;
-//        expandDuration      = 0.1298;
-//        collapseDuration    = 0.1089;
-//        faveIconShowDelay   = expandDuration + collapseDuration / 2.0;
-//        dotRadiusFactors    = @[@(0.0633),@(0.04)];
-//        sparkGroupCount     = 7;
-//
-////        _normalColor         = RGBA(137, 156, 127, 1);
-////        _selectedColor       = RGBA(226, 38, 77, 1);
-////        _dotFirstColor       = RGBA(152, 219, 236, 1);
-////        _dotSecondColor      = RGBA(247, 188, 48, 1);
-////        _circleFromColor     = RGBA(221, 70, 136, 1);
-////        _circleToColor       = RGBA(205, 143, 246, 1);
-//
-//        [self applyInit];
-//
-//    }
-//    return self;
-//}
-
-//- (instancetype)initWithFrame:(CGRect)frame faveIconNormal:(UIImage *)faveIconNormal{
-//    if(self = [super initWithFrame:frame]){
-//        faveIconImage = faveIconNormal;
-////        [self applyInit];
-//    }
-//    return self;
-//}
-- (instancetype)initWithCoder:(NSCoder *)aDecoder{
-    if(self = [super initWithCoder:aDecoder]){
-        [self applyInit];
-    }
-    return self;
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
+    [self applyInit];
 }
-
 - (void)setSelected:(BOOL)selected{
-//    self.selected = selected;
+    [super setSelected:selected];
     [self animateSelect:self.isSelected duration:duration];
 }
 
@@ -84,6 +48,13 @@
     faveIconShowDelay   = expandDuration + collapseDuration / 2.0;
     dotRadiusFactors    = @[@(0.0633),@(0.04)];
     sparkGroupCount     = 7;
+    
+    _normalColor         = RGBA(137, 156, 127, 1);
+    _selectedColor       = RGBA(226, 38, 77, 1);
+    _dotFirstColor       = RGBA(152, 219, 236, 1);
+    _dotSecondColor      = RGBA(247, 188, 48, 1);
+    _circleFromColor     = RGBA(221, 70, 136, 1);
+    _circleToColor       = RGBA(205, 143, 246, 1);
     
     if(nil == faveIconImage){
         faveIconImage = [self imageForState:UIControlStateNormal];
