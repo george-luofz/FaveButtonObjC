@@ -23,6 +23,16 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.heartButton.delegate = self;
+    
+    // test use frame
+    [self test1];
+}
+
+#pragma mark - test use frame
+- (void)test1{
+    FaveButton *faveTestButton = [[FaveButton alloc] initWithFrame:CGRectMake((self.view.frame.size.width-88)/2, 88, 88, 88) normalImage:[UIImage imageNamed:@"heart"]];
+    faveTestButton.delegate = self;
+    [self.view addSubview:faveTestButton];
 }
 
 #pragma mark -- faveButton delegate
@@ -37,6 +47,6 @@
 }
 
 - (void)faveButton:(FaveButton *)faveButton didSelected:(BOOL)selected{
-    
+    // do something after selected
 }
 @end

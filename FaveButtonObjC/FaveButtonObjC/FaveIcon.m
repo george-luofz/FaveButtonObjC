@@ -22,7 +22,6 @@
 - (instancetype)init{
     if(self = [super init]){
         iconColor = [UIColor grayColor];
-        
     }
     return self;
 }
@@ -40,7 +39,7 @@
 
 + (instancetype)createFaveIcon:(UIView *)onView icon:(UIImage *)icon color:(UIColor *)color{
     // onView.bounds is not always correct
-    FaveIcon *faveIcon = [[self alloc] initWithRegion:CGRectMake(0, 0, 44, 44) icon:icon color:color];
+    FaveIcon *faveIcon = [[self alloc] initWithRegion:onView.bounds icon:icon color:color];
     faveIcon.translatesAutoresizingMaskIntoConstraints = NO;
     faveIcon.backgroundColor = [UIColor clearColor];
     [onView addSubview:faveIcon];

@@ -11,8 +11,6 @@
 #import "Ring.h"
 #import "Spark.h"
 
-
-
 @interface FaveButton(){
     CGFloat duration;
     CGFloat expandDuration;
@@ -35,6 +33,15 @@
     [self layoutIfNeeded];
     [self applyInit];
 }
+
+- (instancetype)initWithFrame:(CGRect)frame normalImage:(UIImage *)normalImage{
+    if(self = [super initWithFrame:frame]){
+        [self setImage:normalImage forState:UIControlStateNormal];
+        [self applyInit];
+    }
+    return self;
+}
+
 - (void)setSelected:(BOOL)selected{
     [super setSelected:selected];
     [self animateSelect:self.isSelected duration:duration];

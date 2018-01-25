@@ -23,13 +23,13 @@ typedef NSArray<UIColor *> DotColors;
 
 @property (nonatomic, nullable, weak) id<FaveButtonDelegate>        delegate;
 
-@property (nonatomic, strong) IBInspectable UIColor *normalColor;
-@property (nonatomic, strong) IBInspectable UIColor *selectedColor;
-@property (nonatomic, strong) IBInspectable UIColor *dotFirstColor;
-@property (nonatomic, strong) IBInspectable UIColor *dotSecondColor;
-@property (nonatomic, strong) IBInspectable UIColor *circleFromColor;
-@property (nonatomic, strong) IBInspectable UIColor *circleToColor;
+@property (nonatomic, nullable, strong) IBInspectable UIColor *normalColor;
+@property (nonatomic, nullable, strong) IBInspectable UIColor *selectedColor;
+@property (nonatomic, nullable, strong) IBInspectable UIColor *dotFirstColor;
+@property (nonatomic, nullable, strong) IBInspectable UIColor *dotSecondColor;
+@property (nonatomic, nullable, strong) IBInspectable UIColor *circleFromColor;
+@property (nonatomic, nullable, strong) IBInspectable UIColor *circleToColor;
 
-//- (nullable instancetype)initWithFrame:(CGRect)frame faveIconNormal:(nullable UIImage *)faveIconNormal;
+- (nullable instancetype)initWithFrame:(CGRect)frame normalImage:(nullable UIImage *)normalImage;
 
 @end
